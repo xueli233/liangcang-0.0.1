@@ -26,7 +26,7 @@ li{
 	display: block;
   width: 95px;
   height: 38px;
-  background: url(../images/icon.png) no-repeat;
+  /* background: url(../images/icon.png) no-repeat; */
 }
 /*head头部导航*/
 .wrap .nav {
