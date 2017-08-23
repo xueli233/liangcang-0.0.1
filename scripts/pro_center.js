@@ -36,8 +36,10 @@ $(function() {
 	});
 });
 
-
-//放大镜
+/*
+*
+* 放大镜
+* */
 $('.left-img').mouseover(function() {
 	$('.zoom').show();
 	$('.big-pic').show();

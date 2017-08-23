@@ -40,9 +40,11 @@
 	-moz-user-select: none;
    -khtml-user-select: none;
     user-select: none;
+  cursor: pointer;
 }
 .shop-cart-list table tr td .remove {
 	color: #6393b4;
+  cursor: pointer;
 }
 table tr td .goods_number {
 	width: 24px;
@@ -69,17 +71,18 @@ table tr td .goods_number {
 }
 .checkoutBtn {
 	display: inline-block;
-    width: 168px;
-    height: 30px;
-    color: #fff;
-    margin-bottom: 15px;
-    line-height: 30px;
-    vertical-align: middle;
-    text-align: center;
-    background: #7fa6c5;
-    margin-top: 5px;
-    border: none;
-    outline: none;
+  width: 168px;
+  height: 30px;
+  color: #fff;
+  margin-bottom: 15px;
+  line-height: 30px;
+  vertical-align: middle;
+  text-align: center;
+  background: #7fa6c5;
+  margin-top: 5px;
+  border: none;
+  outline: none;
+  cursor: pointer;
 }
 .line {	
     background: #404040;

@@ -92,6 +92,7 @@
 	border: none;
 	outline: none;
 	margin: 90px 0 0 20px;
+  cursor: pointer;
 }
 .goods-info button a {
 	color: white;
@@ -104,4 +105,5 @@
 	text-align: center;
 	line-height: 34px;
 	margin: 10px 0 0 20px;
+  cursor: pointer;
 }

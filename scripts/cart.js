@@ -37,10 +37,7 @@ function showSum() {
 }
 // 事件委托
 $('table').click(function(event) {
-//	console.log(event.target);
-//  console.log($(event.target));
     if ( event.target.className === 'operate plus') {
-//  	console.log("++")
         //修改数量
         var oNumber = $(event.target).prev();
         var number = oNumber.val();

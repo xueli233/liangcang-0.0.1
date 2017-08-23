@@ -180,33 +180,49 @@ function creatPage(opt) {
       return false;
     }
   }
-  //8.更新热门商品
+  /*
+  *8.更新热门商品
+  * */
   shop.api.fetchHotGoods(_page,12,function (response) {
-    // console.log(response.data);
-    var content = "";
+    var content = "",
+        itLast;
     for(var i = 0; i < response.data.length; i++){
       var obj = response.data[i];
-      console.log(obj);
+      itLast= "items";
+      if((i+1) % 4 ==0)itLast="items itLast";
+      // console.log(obj);
+      // content += `
+      //   <li >
+      //     <div calss="like"></div>
+      //     <a class="items"href="pro_center.html?goods_id=${obj.goods_id}" >
+      //       <img src="${obj.goods_thumb}"/>
+      //       <div class="content desc">
+      //         <span>￥${obj.price}'</span>
+      //         <h4>${obj.goods_name}</h4>
+      //         <p>${obj.goods_desc}</p>
+      //       </div>
+      //     </a>
+      //     <h3>
+      //       <img class="min-img" src="${obj.goods_thumb}"/>
+      //       <p class="g-name">${obj.goods_name}</p>
+      //     </h3>
+      //   </li>
+      //       `
       content += `
-        <li>
-          <div calss="like"></div>
-          <a href="pro_center.html?goods_id=${obj.goods_id}" >
-            <img src="${obj.goods_thumb}"/>
-            <div class="content">
-              <span>￥${obj.price}'</span>
-              <h4>${obj.goods_name}</h4>
-              <p>${obj.goods_desc}</p>
-            </div>
-          </a>
-          <h3>
-            <img class="min-img" src="${obj.goods_thumb}"/>
-            <p>无法获取数据</p>
-          </h3>
-        </li> 
-            `
+      <li class="${itLast}">
+        <a class="oImg" href="pro_center.html?goods_id=${obj.goods_id}">
+          <img src="${obj.goods_thumb}"/>
+          <p class="desc">
+            <span>${obj.goods_desc}</span>
+            <span class="price">价格:${obj.price}元</span>
+          </p>
+        </a>
+        <p class="g-title">${obj.goods_name}</p>
+      </li>
+          `
     }
-      // console.log(content);
     $('#hot-list').html(content);
+    iHover();
   });
 }
 // /****************翻页****************/

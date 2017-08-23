@@ -1,0 +1,20 @@
+/*section的样式*/
+.section {
+  width: 100%;
+  background-color: #EEE;
+}
+.container{
+  width: 1000px;
+  margin: 0 auto;
+}
+/*标题*/
+.navTitle{
+  line-height: 36px;
+  border-bottom: 1px solid #2e353d;
+}
+.navTitle h4 {
+  font-size: 16px;
+}
+.addCom {
+  width: 100%;
+}
